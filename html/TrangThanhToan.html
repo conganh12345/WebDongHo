@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Trang thanh toán | Thế giới đồng hồ
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/TrangThanhToan.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+
+
+
+</head>
+
+<body onload="displayCartItems(), carttotal()">
+
+	<!----header start--->
+	<header>
+		<a href="TrangChinh.html" class="logo">TheGioiDongHo</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="TrangChinh.html">Shop</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="../html/faq.html">Faq</a></li>
+			<li><a href="#contact">Contact</a></li>
+
+		</ul>
+
+		<div class="icons">
+			<a href="#"><i class='bx bx-search'></i></a>
+			<a href="Login.html"><i class='bx bxs-user-circle'></i></a>
+			<a href="#"><i class='bx bxs-shopping-bag'></i></a>
+		</div>
+	</header>
+	<section class="cart">
+		<h2>Sản phẩm đã chọn</h2>
+		<form action="">
+			<table>
+				<thead>
+					<tr>
+						<th>Sản phẩm</th>
+						<th>Giá</th>
+						<th>Số Lượng</th>
+						<th>Chọn</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--Hiện các item trong giỏ hàng-->
+				</tbody>
+			</table>
+			<div style="text-align: center;margin-top: 20px;" class="price-total">
+				<p style="font-weight: bold">Tổng tiền: <span>0</span><sup>đ</sup></p>
+			</div>
+		</form>
+
+	</section>
+
+	<!--Thông tin giao hàng-->
+	<section class="shipping-info-container">
+
+		<form action="TrangChinh.html" onsubmit="return validateShippingForm()">
+	
+			<div class="row">
+	
+				<div class="col">
+	
+					<h3 class="title">Thông tin giao hàng</h3>
+	
+					<div class="inputBox">
+						<span>Họ và tên :</span>
+						<input type="text" placeholder="Nhập họ và tên" required>
+					</div>
+					<div class="inputBox">
+						<span>Số điện thoại :</span>
+						<input type="text" placeholder="Nhập số điện thoại" required>
+					</div>
+					<div class="inputBox">
+						<span>Địa chỉ :</span>
+						<input type="text" placeholder="Nhập địa chỉ" required>
+					</div>
+					<div class="inputBox">
+						<span>Thành phố :</span>
+						<input type="text" placeholder="Nhập tên thành phố" required>
+					</div>
+	
+					<div class="flex">
+						<div class="inputBox">
+							<span>Quận :</span>
+							<input type="text" placeholder="Nhập tên quận" required>
+						</div>
+						<div class="inputBox">
+							<span>Mã Zip :</span>
+							<input type="text" placeholder="Nhập mã Zip" required>
+						</div>
+					</div>
+	
+				</div>
+	
+				<div class="col">
+	
+					<h3 class="title">Phương thức thanh toán</h3>
+	
+					<div class="inputBox" style="max-height: 70px">
+						<span>Các loại thẻ khả dụng :</span>
+						<img src="../img/visa_logo.png" width="20%" alt="">
+						<img src="../img/mastercard_logo.png" width="20%" alt="">
+					</div>
+					<div class="inputBox">
+						<span>Tên trên thẻ :</span>
+						<input type="text" placeholder="Nhập tên trên thẻ" required>
+					</div>
+					<div class="inputBox">
+						<span>Số thẻ :</span>
+						<input type="number" placeholder="Nhập số thẻ" required>
+					</div>
+					<div class="inputBox">
+						<span>Tháng hết hạn :</span>
+						<input type="number" placeholder="Nhập tháng hết hạn" min="1" max="12" required>
+					</div>
+	
+					<div class="flex">
+						<div class="inputBox">
+							<span>Năm hết hạn :</span>
+							<input type="number" placeholder="Nhập năm hết hạn" min="1" required>
+						</div>
+						<div class="inputBox">
+							<span>CVV :</span>
+							<input type="text" placeholder="1234" required>
+						</div>
+					</div>
+	
+				</div>
+		
+			</div>
+	
+			<input type="submit" value="Thanh toán" class="submit-btn">
+	
+		</form>
+	
+	</section>    
+
+	<section class="about" id="about">
+		<div class="about-content">
+			<h2>About</h2>
+			<p>Đồng hồ đeo tay là một chiếc đồng hồ được thiết kế để mang hoặc đeo trên người. Nó được thiết kế để tiếp
+				tục hoạt động bất chấp các chuyển động gây ra bởi các hoạt động của người đó. Đồng hồ đeo tay được thiết
+				kế để đeo quanh cổ tay, được gắn bởi dây đeo đồng hồ hoặc loại vòng đeo tay khác.</p>
+		</div>
+	</section>
+
+	<!----contact start--->
+	<section class="contact" id="contact">
+		<div class="main-contact">
+			<div class="contact-content">
+				<li><a href="#shop">Shop</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#faq">Faq</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</div>
+
+			<div class="contact-content">
+				<li><a href="#">Shipping & Returns</a></li>
+				<li><a href="#">Store Policy</a></li>
+				<li><a href="#">Payment Methods</a></li>
+			</div>
+
+			<div class="contact-content">
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Tel: 123-456-7890</a></li>
+			</div>
+
+			<div class="contact-content">
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Pinterest</a></li>
+			</div>
+
+		</div>
+		
+
+		<div class="action">
+			<form>
+				<input type="email" name="email" placeholder="Your Email" required>
+				<input type="submit" name="submit" value="Submit" required>
+			</form>
+		</div>
+	</section>
+	<div class="last">
+		<p>© 2023 by TheGioiDongHo. Thanks for your support</p>
+	</div>
+	
+<!-----Script---->
+	<script src="../js/script.js"></script>
+</body>
